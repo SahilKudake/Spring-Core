@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<!-- IoC demo -->
+	<bean id="sim" class = "com.spring.demo.ioc.Vodafone"></bean>
+
+	<!--DI using constructor -->
+	<bean id="student1"
+		class="com.spring.demo.dependancyinjection.constructor.Student">
+		<constructor-arg name="studentName"
+			value="Sahil kudake" />
+		<constructor-arg name="id" value="98" />
+	</bean>
+
+	<!--DI using Setters -->
+	<bean id="student2"
+		class="com.spring.demo.dependancyinjection.setters.Student">
+		<property name="studentName" value="Sahil kudake" />
+		<property name="id" value="98" />
+	</bean>
+
+	<!--Single dependency for multiple classes -->
+	<bean id="mathCheatObject"
+		class="com.spring.demo.dependancyinjection.manyclassesonedependancy.MathCheat"></bean>
+
+	<!--Multiple classes using single dependency using ref id -->
+	<bean id="stud"
+		class="com.spring.demo.dependancyinjection.manyclassesonedependancy.Student">
+		<property name="id" value="102"></property>
+		<property name="mathCheat" ref="mathCheatObject"></property>
+	</bean>
+
+	<bean id="anotherStudent"
+		class="com.spring.demo.dependancyinjection.manyclassesonedependancy.AnotherStudent">
+		<property name="cheat" ref = "mathCheatObject"></property>
+	</bean>
+
+</beans>

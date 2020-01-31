@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+<!--************** Autowiring by type ****************** -->
+
+	<bean id="autowiringByType"
+		class="com.spring.demo.autowireing.bytype.Employee" autowire="byType">
+		<property name="id" value="1" />
+		<property name="name" value="sahil" />
+	</bean>
+
+	<bean id="address1"
+		class="com.spring.demo.autowireing.bytype.Address">
+		<property name="pinCode" value="410206" />
+		<property name="city" value="panvel" />
+	</bean>
+	
+	<!--*************** Autowiring by name ***************** -->
+	<bean id="autowiringByName"
+		class="com.spring.demo.autowireing.byname.Employee" autowire="byName">
+		<property name="id" value="1" />
+		<property name="name" value="sahil" />
+	</bean>
+
+	<bean id="address"
+		class="com.spring.demo.autowireing.byname.Address">
+		<property name="pinCode" value="410206" />
+		<property name="city" value="panvel" />
+	</bean>
+
+
+
+
+	<!--************** Autowiring by constructor ************* -->
+
+	<bean id="byConstructor"
+		class="com.spring.demo.autowireing.constructor.Employee"
+		autowire="constructor">
+		<constructor-arg name="id" value="1" />
+		<constructor-arg name="name" value="sahil" />
+	</bean>
+
+	<bean id="address2"
+		class="com.spring.demo.autowireing.constructor.Address">
+		<constructor-arg name="pinCode" value="458956" />
+		<constructor-arg name="city" value="mumbai" />
+	</bean>
+
+
+	<!--*************** Autowiring by annotation by setters ********************** -->
+
+	<bean id="student1"
+		class="com.spring.demo.autowireing.annotation.Student">
+		<property name="name" value="Sahil"></property>
+		<property name="marks" ref="mark"></property>
+	</bean>
+
+	<bean id="mark"
+		class="com.spring.demo.autowireing.annotation.MarkList">
+		<property name="subName" value="English" />
+		<property name="subMarks" value="86" />
+	</bean>
+
+
+
+
+	<bean id="qualifier"
+		class="com.spring.demo.autowireing.annotation.qualifier.Student">
+		<property name="name" value="Chetan"></property>
+		<property name="marks" ref="marathimarks"></property>
+	</bean>
+
+	<bean id="marathimarks"
+		class="com.spring.demo.autowireing.annotation.qualifier.MarkList">
+		<property name="subName" value="Marathi" />
+		<property name="subMarks" value="70" />
+	</bean>
+
+	<bean id="hindimarks"
+		class="com.spring.demo.autowireing.annotation.qualifier.MarkList">
+		<property name="subName" value="Hindi" />
+		<property name="subMarks" value="76" />
+	</bean>
+
+	
+	
+</beans>
