@@ -3,7 +3,7 @@ package com.spring.demo.autowireing.annotation.qualifier;
 public class MarkList {
 
 	private String subName;
-	
+
 	private String subMarks;
 
 	public void setSubName(String subName) {
@@ -18,6 +18,5 @@ public class MarkList {
 	public String toString() {
 		return "MarkList [subName=" + subName + ", subMarks=" + subMarks + "]";
 	}
-	
-	
+
 }

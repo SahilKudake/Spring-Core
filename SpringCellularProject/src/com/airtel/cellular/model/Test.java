@@ -7,6 +7,12 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.airtel.cellular.service.Service;
 
+/**
+ * Purpose : Program to manage cellular services.
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class Test {
 	public static void main(String[] args) {
 

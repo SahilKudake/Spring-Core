@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springproject.demo.model.UserDetails;
 import com.springproject.demo.service.UserServiceImpl;
 
+/**
+ * Purpose : Controller for user
+ * 
+ * @author Sahil Kudake
+ *
+ */
 @RestController
 public class UserController {
 

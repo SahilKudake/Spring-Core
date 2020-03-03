@@ -3,8 +3,12 @@ package com.springproject.demo.spring_demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+
+
 /**
- * Hello world!
+ * Purpose : Spring application to manage users
+ * 
+ * @author Sahil Kudake
  *
  */
 @SpringBootApplication

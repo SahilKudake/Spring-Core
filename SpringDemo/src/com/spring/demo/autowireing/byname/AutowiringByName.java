@@ -3,6 +3,12 @@ package com.spring.demo.autowireing.byname;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * Purpose : Program using autowiring by name
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class AutowiringByName {
 
 	public static void main(String[] args) {

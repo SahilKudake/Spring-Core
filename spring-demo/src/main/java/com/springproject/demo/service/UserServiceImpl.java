@@ -7,6 +7,12 @@ import org.springframework.stereotype.Component;
 
 import com.springproject.demo.model.UserDetails;
 
+/**
+ * Purpose : Service implementation for users
+ * 
+ * @author Sahil Kudake
+ *
+ */
 @Component
 public class UserServiceImpl implements UserService {
 

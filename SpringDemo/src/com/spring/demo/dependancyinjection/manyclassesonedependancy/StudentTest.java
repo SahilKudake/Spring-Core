@@ -3,6 +3,12 @@ package com.spring.demo.dependancyinjection.manyclassesonedependancy;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * Purpose : Program using depenency injection
+ * 
+ * @author Sahil Kudake
+ *
+ */
 public class StudentTest {
 
 	public static void main(String[] args) {

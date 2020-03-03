@@ -9,10 +9,10 @@ public class Airtel {
 	public void setService(Service service) {
 		this.service = service;
 	}
-	
+
 	public void activateService() {
 		service.service();
-		
+
 	}
 
 }
